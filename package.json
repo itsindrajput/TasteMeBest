@@ -1,0 +1,35 @@
+{
+  "name": "exploring",
+  "version": "1.0.0",
+  "description": "This is the lecture 3 Laying the foundation",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/itsindrajput/Namaste-React.git"
+  },
+  "author": "Rishabh Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itsindrajput/Namaste-React/issues"
+  },
+  "homepage": "https://github.com/itsindrajput/Namaste-React#readme",
+  "devDependencies": {
+    "@babel/core": "^7.22.20",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-shimmer-effects": "^1.0.2"
+  },
+  "browserslist": [
+    "last 10 versions"
+  ],
+  "main": "index.js"
+}
