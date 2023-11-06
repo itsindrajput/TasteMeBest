@@ -93,9 +93,13 @@ h5{
 }
 .footer{
     font-size: 1.2rem;
-    display: flex;
-    justify-content: space-between;
     margin: 1rem;
     padding: 0.5rem;
     border: 1px inset black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 98%;
+    text-align: center;
+    background-color: #F3F3F3;
 }

@@ -11,7 +11,7 @@ function filterData(searchText, restaurants){
 
 const Body=()=>{
     const [allrestaurents, setAllrestaurents] = useState([]);
-    const [filteredrestaurants, setFilteredRestaurants] = useState([]);
+    const [filteredrestaurants, setFilteredrestaurants] = useState([]);
     const [searchText, setSearchText]=useState("");  
     
     useEffect(()=>{
@@ -26,14 +26,14 @@ const Body=()=>{
         // console.log(json);
         //Optional Chaining 
         setAllrestaurents(json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setFilteredRestaurants(json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredrestaurants(json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
 
     if (!allrestaurents) return null;
-    // if(filteredrestaurants?.length===0){
-    //     return <h1 className="FilteredText">No Restaurant Found At Your Search</h1>;
-    // }
-    return filteredrestaurants?.length === 0 ? <Shimmer/> : (
+    if(filteredrestaurants?.length===0){
+        return <h1 className="FilteredText">No Restaurant Found At Your Search</h1>;
+    }
+    return (allrestaurents?.length === 0) ? (<Shimmer/>) : (
         <> 
         <div className="search-container">
             <input type="text" className="search-input" placeholder="Search With Restaurant Names....!" 
@@ -45,10 +45,10 @@ const Body=()=>{
             <button className="search-btn"
             onClick={()=>{
                 const data = filterData(searchText, allrestaurents);
-                setFilteredRestaurants(data) ;
+                setFilteredrestaurants(data) ;
             }}
             >Search</button>
-        </div>
+        </div> 
 
         <div className="Restaurant-List">
             {
